@@ -22,36 +22,42 @@ class MyStatelessWidget extends StatelessWidget{
       child: new Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-      new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25),),
+
+        new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25),),
         new Container(
           padding: EdgeInsets.only(top: 10.0,bottom: 10.0),
       child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Lato',fontSize: 35, fontWeight: FontWeight.bold), )
 
         )
         ,
-        new Container(
+
+        Hero(
+          tag: "heroSearchBar",
+          child: new Container(
+          child: new TextField(decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
+                  contentPadding: const EdgeInsets.all(13.0),
+            border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(23.0),
+            borderSide: new BorderSide(color: Colors.black12)),
+            hintText: "Search",
+            hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.normal),
+            fillColor: Colors.black12,
+            focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(23.0),
+            borderSide: new BorderSide(color: Colors.black12)),
+            filled: true
+    ),
 
 
-          child: new TextField(
-            decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search, color: Colors.black38,),
-              contentPadding: const EdgeInsets.all(13.0),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(23.0),
-                borderSide: new BorderSide(color: Colors.black12)),
-              hintText: "Search",
-              hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.normal),
-              fillColor: Colors.black12,
-              focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(23.0),
-                  borderSide: new BorderSide(color: Colors.black12)),
-                  filled: true
-            ),
+    )
 
-          )
-        )
 
-        
+
+    )
+
+    ),
+
+
 
 
 
