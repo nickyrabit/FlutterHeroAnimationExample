@@ -15,7 +15,9 @@ class SearchStatelessWidget extends StatelessWidget{
             Hero(
                 tag: "heroSearchBar",
                 child: new Container(
-                    child: new TextField(decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
+                    child: new TextField(
+
+                      decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
                         contentPadding: const EdgeInsets.all(13.0),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(23.0),
@@ -26,7 +28,9 @@ class SearchStatelessWidget extends StatelessWidget{
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(23.0),
                             borderSide: new BorderSide(color: Colors.black12)),
-                        filled: true
+                        filled: true,
+
+
                     ),
 
 
@@ -56,7 +60,6 @@ class SearchStatelessWidget extends StatelessWidget{
         );
 
 
-    return null;
   }
 
 

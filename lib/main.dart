@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nav_routes/list.dart';
 
 void main(){
   runApp(new MaterialApp(
@@ -34,9 +35,23 @@ class MyStatelessWidget extends StatelessWidget{
         Hero(
           tag: "heroSearchBar",
           child: new Container(
-          child: new TextField(decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
+          child: new TextField(
+
+            //handling on click
+            onTap: (){
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchStatelessWidget())
+
+              );},
+
+            //setting the shape of the input decoration
+            decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
                   contentPadding: const EdgeInsets.all(13.0),
+            //setting the border of the textfield
             border: OutlineInputBorder(
+
             borderRadius: BorderRadius.circular(23.0),
             borderSide: new BorderSide(color: Colors.black12)),
             hintText: "Search",
