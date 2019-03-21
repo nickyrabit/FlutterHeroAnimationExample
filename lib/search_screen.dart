@@ -9,7 +9,6 @@ class SearchStatelessWidget extends StatelessWidget{
       body: Container(
         padding: EdgeInsets.all(30.0),
         color: Colors.white70,
-
         child: new Column(
           children: <Widget>[
             Hero(
@@ -29,38 +28,13 @@ class SearchStatelessWidget extends StatelessWidget{
                             borderRadius: BorderRadius.circular(23.0),
                             borderSide: new BorderSide(color: Colors.black12)),
                         filled: true,
-
-
                     ),
-
-
                     )
-
-
-
                 )
-
             ),
-
-
           ],
-
-
         ),
-
-
-
       )
-
-
-
     )
-
-
         );
-
-
-  }
-
-
-}
+  }}
