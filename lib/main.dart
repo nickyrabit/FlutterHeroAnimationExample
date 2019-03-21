@@ -39,7 +39,12 @@ class MyStatelessWidget extends StatelessWidget{
                 borderRadius: BorderRadius.circular(23.0),
                 borderSide: new BorderSide(color: Colors.black12)),
               hintText: "Search",
-              hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.normal)
+              hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.normal),
+              fillColor: Colors.black12,
+              focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(23.0),
+                  borderSide: new BorderSide(color: Colors.black12)),
+                  filled: true
             ),
 
           )
