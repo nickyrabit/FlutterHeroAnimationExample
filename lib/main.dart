@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_nav_routes/list.dart';
+import 'package:flutter_nav_routes/search_screen.dart';
 
 void main(){
   runApp(new MaterialApp(
@@ -31,21 +31,17 @@ class MyStatelessWidget extends StatelessWidget{
 
         )
         ,
-
         Hero(
           tag: "heroSearchBar",
           child: new Container(
           child: new TextField(
-
             //handling on click
             onTap: (){
       //opening a new screen
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SearchStatelessWidget())
-
               );},
-
             //setting the shape of the input decoration
             decoration: InputDecoration(prefixIcon: Icon(Icons.search, color: Colors.black38,),
                   contentPadding: const EdgeInsets.all(13.0),
@@ -93,23 +89,3 @@ class MyStatelessWidget extends StatelessWidget{
 }
 
 
-class DetailScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: GestureDetector(
-        child: Center(
-          child: Hero(
-            tag: 'imageHero',
-            child: Image.network(
-              'https://picsum.photos/250?image=9',
-            ),
-          ),
-        ),
-        onTap: () {
-          Navigator.pop(context);
-        },
-      ),
-    );
-  }
-}
