@@ -34,6 +34,7 @@ class MyStatelessWidget extends StatelessWidget{
 
           child: new TextField(
             decoration: InputDecoration(
+              prefixIcon: Icon(Icons.search, color: Colors.black38,),
               contentPadding: const EdgeInsets.all(13.0),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(23.0),
