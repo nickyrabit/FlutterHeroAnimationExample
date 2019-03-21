@@ -39,7 +39,7 @@ class MyStatelessWidget extends StatelessWidget{
 
             //handling on click
             onTap: (){
-
+      //opening a new screen
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SearchStatelessWidget())
