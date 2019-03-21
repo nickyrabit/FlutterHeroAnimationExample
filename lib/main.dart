@@ -25,35 +25,27 @@ class MyStatelessWidget extends StatelessWidget{
       new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25),),
         new Container(
           padding: EdgeInsets.only(top: 10.0,bottom: 10.0),
-      child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Roboto',fontSize: 30), )
+      child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Lato',fontSize: 35, fontWeight: FontWeight.bold), )
 
         )
-
         ,
-            new Container(
-            padding: EdgeInsets.only(left: 10.0,right:10.0),
-            decoration: new BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: new BorderRadius.only(
-                    topLeft: const Radius.circular(40.0),
-                    topRight: const Radius.circular(40.0),
-                    bottomLeft:const Radius.circular(40.0),
-                    bottomRight: const Radius.circular(40.0))),
-
-                child: TextFormField(
-                    decoration: InputDecoration(
-                    border: InputBorder.none,
-                    icon: new Icon(Icons.search, color: Colors.grey, ),
-                    hintText: 'Tafuta',
-                    hintStyle: TextStyle(fontFamily: 'Lato'),
-
-                  ),
-                )
+        new Container(
 
 
+          child: new TextField(
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.all(13.0),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(23.0),
+                borderSide: new BorderSide(color: Colors.black12)),
+              hintText: "Search",
+              hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.normal)
             ),
 
+          )
+        )
 
+        
 
 
 
@@ -69,34 +61,28 @@ class MyStatelessWidget extends StatelessWidget{
 
 
 
-  void _showToast(BuildContext context) {
-    final scaffold = Scaffold.of(context);
-    scaffold.showSnackBar(
-      SnackBar(
-        content: const Text('Added to favorite'),
-        action: SnackBarAction(
-            label: 'UNDO', onPressed: scaffold.hideCurrentSnackBar),
-      ),
-    );
-  }
+
 
 }
 
 
-
-class SearchScreen extends StatelessWidget {
+class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-
-    return new SafeArea(
-      child : new Scaffold(
-
-        appBar: AppBar(
-          title: Text('New Slide'),
-        )
-    )
+    return Scaffold(
+      body: GestureDetector(
+        child: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image.network(
+              'https://picsum.photos/250?image=9',
+            ),
+          ),
+        ),
+        onTap: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
-
 }
