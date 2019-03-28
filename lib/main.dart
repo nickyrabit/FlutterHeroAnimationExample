@@ -84,11 +84,22 @@ class MyStatelessWidget extends StatelessWidget{
 
               ),
 
+
+
+            //getting image from online
               ClipRect(
                 child: Align(
                   alignment: Alignment.topCenter,
                   heightFactor: 0.5,
                   child: Image.network(imageLink),
+
+                ),
+
+),
+                //getting image from local
+              ClipRect(
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
 
