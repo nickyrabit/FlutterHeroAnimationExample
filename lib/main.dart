@@ -52,6 +52,7 @@ class MyStatelessWidget extends StatelessWidget{
               Hero(
                   tag: "heroSearchBar",
                   child: new Container(
+                    padding: EdgeInsets.only(bottom: 20),
                       child: new TextField(
                         //handling on click
                         onTap: (){
@@ -86,7 +87,7 @@ class MyStatelessWidget extends StatelessWidget{
 
 
 
-            //getting image from online
+            /**getting image from online
               ClipRect(
                 child: Align(
                   alignment: Alignment.topCenter,
@@ -96,14 +97,58 @@ class MyStatelessWidget extends StatelessWidget{
                 ),
 
 ),
+             **/
+                //getting image from local
+              ClipRRect(
+
+                borderRadius:BorderRadius.circular(30.0),
+                clipBehavior: Clip.hardEdge,
+
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
+
+                ),
+              )
+,
                 //getting image from local
               ClipRect(
                 child: Card(
                   child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
+              )
+,
+                //getting image from local
+              ClipRect(
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
 
-)
+                ),
+              )
+,
+                //getting image from local
+              ClipRect(
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
+
+                ),
+              )
+,
+                //getting image from local
+              ClipRect(
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
+
+                ),
+              )
+,
+                //getting image from local
+              ClipRect(
+                child: Card(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
+
+                ),
+              )
 
 
 
