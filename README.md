@@ -4,9 +4,10 @@ In this project I used Hero animation on an event of a click. Other features inc
 * Opening new Screen using On Tap Method
 * Custom Search bar
 * Custom Fonts
-* Opacity in fonts
+* Styling the Custom Fonts
 * Loading Image From Asset File
 * Clipping Image using ClipRRect
+* Scrolling feature
 
 
 ## Output
