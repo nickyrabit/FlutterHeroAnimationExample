@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nav_routes/search_screen.dart';
-
+import 'package:flutter_nav_routes/tile_screen_one.dart';
 
 //initializing variables
 var imageAsset = new Image.asset('assets/nav_header_backgournd.png');
@@ -14,6 +14,11 @@ void main(){
   ));
 }
 
+
+final paddingSide  =  Padding(
+  padding: EdgeInsets.only(bottom: 12),
+
+);
 
 
 
@@ -42,10 +47,13 @@ class MyStatelessWidget extends StatelessWidget{
             children: <Widget>[
 
 
-              new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25),),
+              new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25, color: Colors.black.withOpacity(0.65)),
+                      ),
               new Container(
                   padding: EdgeInsets.only(top: 10.0,bottom: 10.0),
-                  child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Lato',fontSize: 35, fontWeight: FontWeight.bold), )
+                  child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Lato',fontSize: 35, fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.65)
+                                  ), )
 
               )
               ,
@@ -99,52 +107,77 @@ class MyStatelessWidget extends StatelessWidget{
 ),
              **/
                 //getting image from local
-              ClipRRect(
+              Hero(
+                tag: "tile_one",
+                child: ClipRRect(
+                      borderRadius:BorderRadius.circular(30.0),
+                      clipBehavior: Clip.hardEdge,
+                child: GestureDetector(
+                  onTap: (){
+                    //opening a new screen
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FirstTileWidget())
+                    );}
+                  ,
+                    child: Image.asset("assets/nav_header_backgournd.png"),
+                  ),
+                )
+                  ,
+              )
 
+
+              ,
+          paddingSide,
+
+           ClipRRect(
+            borderRadius:BorderRadius.circular(30.0),
+            clipBehavior: Clip.hardEdge,
+            child: GestureDetector(
+                  child: Image.asset("assets/nav_header_backgournd.png"),
+
+                ),
+              )
+,
+              paddingSide,
+                //getting image from local
+              ClipRRect(
                 borderRadius:BorderRadius.circular(30.0),
                 clipBehavior: Clip.hardEdge,
-
-                child: Card(
+                child: GestureDetector(
                   child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
               )
 ,
+              paddingSide,
                 //getting image from local
-              ClipRect(
-                child: Card(
+              ClipRRect(
+                borderRadius:BorderRadius.circular(30.0),
+                clipBehavior: Clip.hardEdge,
+                child: GestureDetector(
                   child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
               )
 ,
+              paddingSide,
                 //getting image from local
-              ClipRect(
-                child: Card(
+              ClipRRect(
+                borderRadius:BorderRadius.circular(30.0),
+                clipBehavior: Clip.hardEdge,
+                child: GestureDetector(
                   child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
               )
 ,
+              paddingSide,
                 //getting image from local
-              ClipRect(
-                child: Card(
-                  child: Image.asset("assets/nav_header_backgournd.png"),
-
-                ),
-              )
-,
-                //getting image from local
-              ClipRect(
-                child: Card(
-                  child: Image.asset("assets/nav_header_backgournd.png"),
-
-                ),
-              )
-,
-                //getting image from local
-              ClipRect(
-                child: Card(
+              ClipRRect(
+                borderRadius:BorderRadius.circular(30.0),
+                clipBehavior: Clip.hardEdge,
+                child: GestureDetector(
                   child: Image.asset("assets/nav_header_backgournd.png"),
 
                 ),
