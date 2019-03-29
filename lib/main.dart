@@ -2,34 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nav_routes/search_screen.dart';
 import 'package:flutter_nav_routes/tile_screen_one.dart';
 
-//initializing variables
+//initializing  image links
 var imageAsset = new Image.asset('assets/nav_header_backgournd.png');
 var imageLink = "https://source.unsplash.com/random";
 
+
+//this is where the app begins
 void main(){
   runApp(new MaterialApp(
+    //removing that annoying debug banner
     debugShowCheckedModeBanner: false,
 
+    //declaring home class
     home: new MyStatelessWidget(),
   ));
 }
 
 
+//defining a widget
 final paddingSide  =  Padding(
   padding: EdgeInsets.only(bottom: 12),
-
 );
 
 
 
-
+//this is the home class
 class MyStatelessWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
 
-    // TODO: implement build
+    //safe area makes the widgets to stop intruding phyisical barriers of the phone this app doesnt have AppBar
     return new SafeArea(
+
     child: new Scaffold(
 
 
@@ -38,6 +43,7 @@ class MyStatelessWidget extends StatelessWidget{
       padding: EdgeInsets.all(30.0),
       color: Colors.white70,
 
+        //Setting scrollview
         child : new SingleChildScrollView(
           child: new Column(
 
@@ -46,9 +52,10 @@ class MyStatelessWidget extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
 
-
+            //this is the textview
               new Text('Hello Nicky', style: TextStyle(fontFamily: 'Lato',fontSize: 25, color: Colors.black.withOpacity(0.65)),
                       ),
+
               new Container(
                   padding: EdgeInsets.only(top: 10.0,bottom: 10.0),
                   child: new Text('Historia Ya Kale', style: TextStyle(fontFamily: 'Lato',fontSize: 35, fontWeight: FontWeight.bold,
@@ -57,6 +64,8 @@ class MyStatelessWidget extends StatelessWidget{
 
               )
               ,
+              //setting hero animation. you must have a TAG and it should be the same to both screens(if translating between screens)
+              //hero animation should have one child only.
               Hero(
                   tag: "heroSearchBar",
                   child: new Container(
@@ -106,12 +115,18 @@ class MyStatelessWidget extends StatelessWidget{
 
 ),
              **/
-                //getting image from local
+
+              //setting hero animation. you must have a TAG and it should be the same to both screens(if translating between screens)
+              //hero animation should have one child only.
               Hero(
                 tag: "tile_one",
+
+                // ClipRRect A widget that clips its child using a rounded rectangle. it needs BorderRadius
                 child: ClipRRect(
                       borderRadius:BorderRadius.circular(30.0),
                       clipBehavior: Clip.hardEdge,
+
+                //i use gesture detector to detect the touches inside the ClipRRect
                 child: GestureDetector(
                   onTap: (){
                     //opening a new screen
