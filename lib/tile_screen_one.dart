@@ -10,6 +10,7 @@ class FirstTileWidget extends StatelessWidget {
           body: Container(
         child: new Column(
           children: <Widget>[
+            //receiving the hero using THE SAME TAG i used earlier, thats the rule
             Hero(
               tag: "tile_one",
               child: Image.asset("assets/nav_header_backgournd.png"),

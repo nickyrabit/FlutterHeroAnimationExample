@@ -13,6 +13,8 @@ class SearchStatelessWidget extends StatelessWidget {
           Hero(
               tag: "heroSearchBar",
               child: new Container(
+
+                //Custom search bar
                   child: new TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(
