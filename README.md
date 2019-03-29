@@ -8,6 +8,14 @@ In this project I used Hero animation on an event of a click. Other features inc
 * Loading Image From Asset File
 * Clipping Image using ClipRRect
 
+
+## Output
+Home Screen, You tap the search bar for more.
+
+![device-2019-03-29-145940](https://user-images.githubusercontent.com/7089058/55231528-ed539b80-5233-11e9-8c97-0217cf7adacb.png) 
+
+
+
 ## Getting Started
 To use this repo you need to have flutter in your machine. pull and enjoy.
 
